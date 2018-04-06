@@ -1,18 +1,25 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class UI {
 
+	BufferedReader reader;
+
+	public UI(InputStream inputStream) {
+		reader = new BufferedReader(new InputStreamReader(inputStream));
+	}
+
 	public PlayerAction getNextMove() {
 		do {
 			try {
-				Scanner scanner = new Scanner(System.in);
-				scanner.skip(".");
 				System.out.println("Enter your move");
-				String input = scanner.nextLine();
-				scanner.close();
+				String input = reader.readLine();
 				return interpret(input);
-			} catch(IllegalArgumentException | NoSuchElementException e) {
+			} catch(IllegalArgumentException | IOException e) {
 				System.out.println("Invalid input format. Try again");
 			}
 		} while(true);

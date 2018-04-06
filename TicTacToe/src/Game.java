@@ -1,9 +1,19 @@
+import java.io.InputStream;
+
 public class Game {
 	
 	private Player currentPlayer;
-	private Board board = new Board();
-	private UI ui = new UI();
-	private int putMovesLeft = 6;
+	private Board board;
+	private InputStream inputStream;
+	private UI ui;
+	private int movesDone;
+	
+	public Game(InputStream stream) {
+		this.inputStream = stream;
+		this.ui = new UI(inputStream);
+		this.board = new Board();
+		this.movesDone = 0;
+	}
 	
 	public void startGame() {
 		currentPlayer = Player.P1;
@@ -32,14 +42,14 @@ public class Game {
 
 	private void runMove(PlayerAction move) throws InvalidMove {
 		try {
-			if(putMovesLeft>0) {
+			if(movesDone<6) {
 				PutAction action = (PutAction)move;
 				runPutAction(action);
-				putMovesLeft--;
 			} else {
 				MoveAction action = (MoveAction)move;
 				runMoveAction(action);
 			}
+			movesDone++;
 		} catch(ClassCastException e) {
 			throw new InvalidMove();
 		}

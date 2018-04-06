@@ -5,13 +5,14 @@ public class UI {
 
 	public PlayerAction getNextMove() {
 		do {
-			System.out.println("Enter your move");
-			Scanner scanner = new Scanner(System.in);
-			String input = scanner.nextLine();
-			scanner.close();
 			try {
+				Scanner scanner = new Scanner(System.in);
+				scanner.skip(".");
+				System.out.println("Enter your move");
+				String input = scanner.nextLine();
+				scanner.close();
 				return interpret(input);
-			} catch(IllegalArgumentException e) {
+			} catch(IllegalArgumentException | NoSuchElementException e) {
 				System.out.println("Invalid input format. Try again");
 			}
 		} while(true);

@@ -1,0 +1,26 @@
+import java.util.List;
+
+public class CoffeeMachine {
+	
+	Display display;
+	Inventory inventory;
+	Maker maker;
+	static List<Beverage> beverages;
+	static {
+		Beverage coffee = new Beverage("coffee",DefaultCoffeRecipe);
+	}
+	
+	public CoffeeMachine(Maker maker, Display display) {
+		resetInventory();
+		this.display = display;
+		this.maker = maker;
+		this.display.setBeverages(beverages);
+		this.display.setInventory(inventory);
+	}
+
+	private void resetInventory() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

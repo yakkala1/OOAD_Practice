@@ -1,0 +1,11 @@
+
+public class App {
+	
+	public static void main(String[] args) {
+		Display display = new Display();
+		CoffeeMachine machine = new CoffeeMachine( new CoffeeMaker() , display );
+		while( true ) {
+		}
+	}
+
+}

@@ -1,0 +1,6 @@
+
+public class Recipe {
+	
+	Map<Ingredient,Integer> ingredients;
+
+}

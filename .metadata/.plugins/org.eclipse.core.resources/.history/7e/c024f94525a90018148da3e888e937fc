@@ -1,0 +1,6 @@
+
+public class App {
+	
+	CoffeeMachine machine = new CoffeMachine( new CoffeeMaker() , new Display() );
+
+}

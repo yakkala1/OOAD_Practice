@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;display&apos; from expression &apos;new Display()&apos;&#x0A;- Original project: &apos;CoffeeMachine&apos;&#x0A;- Variable name: &apos;display&apos;&#x0A;- Destination method: &apos;App.main()&apos;&#x0A;- Variable expression: &apos;new Display()&apos;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;display&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;{App.java" name="display" replace="true" selection="129 13" stamp="1535283894137" version="1.0"/>
+</session>

@@ -1,0 +1,11 @@
+import java.util.Map;
+
+public class Recipe {
+	
+	Map<Ingredient,Integer> ingredients;
+	
+	public static Recipe Recipe(Object.. x) {
+		
+	}
+
+}

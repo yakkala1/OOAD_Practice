@@ -1,0 +1,6 @@
+
+public interface Beverage {
+	
+	public String getName();
+
+}

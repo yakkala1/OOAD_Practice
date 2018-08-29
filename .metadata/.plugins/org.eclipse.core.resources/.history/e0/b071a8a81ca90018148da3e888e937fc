@@ -1,0 +1,6 @@
+
+public class Inventory {
+	
+	Map<Ingredient,Integer> ingredientsAvailable;
+
+}

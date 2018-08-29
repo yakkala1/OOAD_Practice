@@ -1,0 +1,15 @@
+
+public class Beverage {
+	
+	String name;
+	Recipe recipe;
+	
+	public String getName() {
+		return name;
+	}
+	
+	public Recipe getRecipe() {
+		return recipe;
+	}
+
+}

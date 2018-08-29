@@ -1,0 +1,18 @@
+Entities:
+
+- Game
+    - board : Board
+    - players : CycledList<Player>
+    - positionOfPlayers : Map<Player,Location>
+    - runMove(Player,int move)
+
+- Player
+    - name : String
+    - number : int
+
+- Board
+    - locations : Map<Integer,Location>
+    - addSnake(int from, int to)
+    - addLadder(int from, int to)
+    - hasSnake(int locationId)
+    - hasLadder(int locationId)

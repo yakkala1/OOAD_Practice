@@ -1,0 +1,6 @@
+public class Display {
+	
+	List<Beverage> beverages;
+	Inventory inventory;
+
+}

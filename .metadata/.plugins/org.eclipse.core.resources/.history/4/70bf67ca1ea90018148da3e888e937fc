@@ -1,0 +1,14 @@
+import java.util.List;
+
+public class Display {
+	
+	List<Beverage> beverages;
+	Inventory inventory;
+	
+	public void updateDisplay() {
+		for( Beverage beverage : beverages ) {
+			
+		}
+	}
+
+}

@@ -1,0 +1,10 @@
+public class Display {
+	
+	List<Beverage> beverages;
+	Inventory inventory;
+	
+	public void updateDisplay() {
+		
+	}
+
+}
